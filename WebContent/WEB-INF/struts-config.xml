@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="testeStrutsForm" type="br.com.saymon.form.TesteStrutsForm"/>
+    </form-beans>
+
+	<global-forwards>
+        <forward name="testeStruts" path="/testeStruts.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/testeStruts" type="br.com.saymon.action.TesteStrutsAction" name="testeStrutsForm">
+        	<forward name="success" path="/testeStruts.jsp" />
+        </action>
+    </action-mappings>
+
+</struts-config>
